@@ -17,7 +17,7 @@ module.exports = {
         spaceId: `8tr5pz4jj1dr`,
         accessToken: `nY9FigvpM_kT53ILUKAtvkuEGqVOymKvXMICjVoW4Rk`
       }
-    }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
