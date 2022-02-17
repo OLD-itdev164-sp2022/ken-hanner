@@ -1,25 +1,29 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Blog`,
-    description: `ITDEV-164 Gatsby Blog`,
+    description: `ITDEV-164 Gatsby Blog.`,
     author: `Ken Hanner`,
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
       name: `Ken Hanner`,
       company: `Hanner Time`,
-      address: `123 Main Street`,
+      address: `Email`
     },
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `8tr5pz4jj1dr`,
-        accessToken: `nY9FigvpM_kT53ILUKAtvkuEGqVOymKvXMICjVoW4Rk`
+        spaceId: `${process.env.SPACE_ID}`,
+        accessToken: `${process.env.ACCESS_TOKEN}`
       }
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,6 +31,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
