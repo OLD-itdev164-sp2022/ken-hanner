@@ -5,16 +5,18 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Gatsby Blog`,
-    description: `ITDEV-164 Gatsby Blog`,
+    description: `ITDEV-164 Gatsby Blog.`,
     author: `Ken Hanner`,
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
       name: `Ken Hanner`,
       company: `Hanner Time`,
-      address: `123 Main Street`,
+      address: `Email`
     },
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -22,8 +24,6 @@ module.exports = {
         accessToken: `${process.env.ACCESS_TOKEN}`
       }
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
