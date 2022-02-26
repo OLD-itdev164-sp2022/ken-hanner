@@ -31,6 +31,8 @@ const IndexPage = ({ data }) => (
 
 export default IndexPage
 
+//fixed issue in Contentful where images were returning null value by publishing 
+//drafted photos in published blog content, then republishing blog content
 export const query = graphql`
   {
     allContentfulBlogPost {
