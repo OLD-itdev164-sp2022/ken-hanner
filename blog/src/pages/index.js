@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => (
     <Seo title="Home" />
     <ul>
     {
-      data.allContentfulBlogPost.edges.map(edge => (
+      data.allContentfulBlogPost.edges.map(edge => ( 
         <li>
           <Link to={edge.node.slug} key={edge.node.id}>{edge.node.title}</Link>
           <div>
@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => (
             />
           </div>
           <div>
-            {edge.node.body.childMarkdownRemark.excerpt}
+            {edge.node.body.childMarkdownRemark.excerpt} 
           </div>
         </li>
       ))
