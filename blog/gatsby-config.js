@@ -11,7 +11,7 @@ module.exports = {
     contact: {
       name: `Ken Hanner`,
       company: `Hanner Time`,
-      address: `Email`
+      address: `Email Address`
     },
   },
   plugins: [
