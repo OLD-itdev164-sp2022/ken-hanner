@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Anything you like.`,
     description: `ITDEV-164 Gatsby Blog.`,
-    author: `Ken Hanner`,
+    author: `Ken  Hanner`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
       name: `Ken Hanner`,
