@@ -1,4 +1,4 @@
 import React from 'react'
-import { BaseCOntainer } from '../BaseContainer'
+import { BaseContainer } from '../BaseContainer'
 
 export const Main = props => <BaseContainer as="main" {...props} />
