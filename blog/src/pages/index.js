@@ -13,7 +13,7 @@ const Grid = styled(Box)`
   min-width: 0px;
   display: grid;
   gap: 100px;
-  grid-template-columns: repeat()(auto-fit, minmax()(128px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
 `
 
 const IndexPage = ({ data }) => (
@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => (
       data.allContentfulBlogPost.edges.map(edge => (
         <Card key={edge.node.id} width={256} p={3}>
           <Link to={edge.node.slug}>
-            <Image src={edge.node.heroImage.fluid.src} alt="hero image" />
+            <Image src={edge.node.heroImage.file.url} alt="hero image" />
           </Link>
           <Heading>{edge.node.title}</Heading>
           <div>{edge.node.body.childMarkdownRemark.excerpt}</div>
@@ -55,9 +55,11 @@ export const query = graphql`
           heroImage {
             gatsbyImageData(
               layout: CONSTRAINED
-              placeholder: BLURRED
-              width: 600
+              width: 960
             )
+            file {
+              url
+            }
           }
         }
       }
